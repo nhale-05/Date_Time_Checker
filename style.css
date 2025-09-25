@@ -129,6 +129,13 @@ input::placeholder {
     color: #9ca3af;
 }
 
+.button-group {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
 #checkBtn {
     background: #3b82f6;
     color: #ffffff;
@@ -140,10 +147,11 @@ input::placeholder {
     font-family: 'Inter', sans-serif;
     cursor: pointer;
     transition: all 0.3s ease;
-    margin-bottom: 20px;
     box-shadow: 
         0 4px 6px rgba(0, 0, 0, 0.1),
         0 1px 3px rgba(0, 0, 0, 0.08);
+    flex: 1;
+    max-width: 150px;
 }
 
 #checkBtn:hover {
@@ -155,6 +163,39 @@ input::placeholder {
 }
 
 #checkBtn:active {
+    transform: translateY(0);
+    box-shadow: 
+        0 2px 4px rgba(0, 0, 0, 0.1),
+        0 1px 2px rgba(0, 0, 0, 0.06);
+}
+
+#clearBtn {
+    background: #6b7280;
+    color: #ffffff;
+    border: none;
+    padding: 12px 32px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    font-family: 'Inter', sans-serif;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 
+        0 4px 6px rgba(0, 0, 0, 0.1),
+        0 1px 3px rgba(0, 0, 0, 0.08);
+    flex: 1;
+    max-width: 150px;
+}
+
+#clearBtn:hover {
+    background: #4b5563;
+    transform: translateY(-2px);
+    box-shadow: 
+        0 8px 15px rgba(0, 0, 0, 0.15),
+        0 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+#clearBtn:active {
     transform: translateY(0);
     box-shadow: 
         0 2px 4px rgba(0, 0, 0, 0.1),
@@ -249,5 +290,16 @@ input::placeholder {
     .logo {
         max-width: 80px;
         max-height: 80px;
+    }
+    
+    .button-group {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    #checkBtn,
+    #clearBtn {
+        max-width: none;
+        width: 100%;
     }
 }

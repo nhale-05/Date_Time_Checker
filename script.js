@@ -108,6 +108,21 @@ function showResult(message, isValid, weekday = null) {
     resultDiv.style.display = 'flex';
 }
 
+function clearForm() {
+    // Clear all input fields
+    document.getElementById('day').value = '';
+    document.getElementById('month').value = '';
+    document.getElementById('year').value = '';
+    
+    // Hide result
+    const resultDiv = document.getElementById('result');
+    resultDiv.className = 'result hidden';
+    resultDiv.style.display = 'none';
+    
+    // Focus on first field
+    document.getElementById('day').focus();
+}
+
 // Add Enter key functionality
 document.addEventListener('DOMContentLoaded', function() {
     const inputs = document.querySelectorAll('input');
